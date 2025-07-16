@@ -1,0 +1,19 @@
+#root {
+  --main-color-from: #fdba74;     /* from-orange-300 */
+  --main-color-to: #f97316;       /* to-orange-500 */
+  --main-color-hover-from: #ea580c; /* from-orange-600 */
+  --main-color-hover-to: #c2410c;
+}
+.bg_button {
+  background-image: linear-gradient(to bottom, var(--main-color-from), var(--main-color-to));
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px; /* tương đương rounded-full */
+  transition: background-image 0.3s ease;
+}
+
+.bg_button:hover {
+  background-image: linear-gradient(to bottom, var(--main-color-hover-from), var(--main-color-hover-to));
+}
+
