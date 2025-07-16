@@ -16,4 +16,29 @@
 .bg_button:hover {
   background-image: linear-gradient(to bottom, var(--main-color-hover-from), var(--main-color-hover-to));
 }
+.font-sale{
+
+font-family: 'Arima Madurai';
+font-style: normal;
+font-weight: 500;
+/* identical to box height, or 125% */
+text-align: center;
+/* dd/500 */
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+/* Gói khám thai tổng quát */
+.font-roboto{
+  font-family:'Roboto';
+}
+*{
+  font-family:'Roboto';
+  font-style: normal;
+}/* Dịch vụ thai sản trọn gói */
 
