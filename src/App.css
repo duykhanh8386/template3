@@ -45,3 +45,23 @@ flex-grow: 0;
   font-style: normal;
 }/* Dịch vụ thai sản trọn gói */
 
+.scrollbar-custom::-webkit-scrollbar {
+  width: 12px;               /* Độ rộng của scrollbar dọc */
+  height: 12px;              /* Độ cao của scrollbar ngang (nếu có) */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #f1f1f1;       /* Màu nền track */
+  border-radius: 6px;        /* Bo góc track */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #888;          /* Màu thanh cuộn */
+  border-radius: 6px;
+  border: 3px solid transparent; /* "padding" cho thanh cuộn */
+  background-clip: content-box;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
