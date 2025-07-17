@@ -8,9 +8,12 @@
   background-image: linear-gradient(to bottom, var(--main-color-from), var(--main-color-to));
   color: white;
   font-weight: bold;
-  padding: 0.5rem 1.25rem;
+
   border-radius: 9999px; /* tương đương rounded-full */
-  transition: background-image 0.3s ease;
+  transition: background-image 0.3s ease-in-out;
+}
+.swiper-wrapper {
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
 
 .bg_button:hover {
