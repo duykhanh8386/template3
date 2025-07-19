@@ -16,17 +16,21 @@ function Section3() {
 
             {/* Tiêu đề */}
             <div className="grid grid-cols-8 gap-1 items-center sm:px-6 px-2 sm:py-4 py-2 pb-0 sm:pb-4 text-center relative">
+              <h2 className="sm:block hidden text-[15px] col-span-8  xl:text-lg 2xl:text-xl font-bold mb-1">
+                  Bảng giá các dịch vụ khám và chữa bệnh:
+                </h2>
               {/* Logo bên trái */}
-              <div className="sm:self-end col-span-8 place-items-center sm:col-span-1">
+              <div className="sm:self-end col-start-4 col-end-6 place-items-center sm:col-span-2 lg:col-span-1">
                 <div className="aspect-[4/1]">
                   <img src={Logo} alt="Logo" className="w-full h-full object-contain" />
                 </div>
               </div>
               {/* trong 1 block de can space */}
-              <div className="hidden sm:block" />
+             
               {/* Tiêu đề ở giữa */}
-              <div className="col-span-8 sm:col-span-4 place-items-center">
-                <h2 className="text-[15px]   xl:text-lg 2xl:text-xl font-bold mb-1">
+               
+              <div className="sm:col-start-3 sm:col-end-7  col-span-8 place-items-center">
+                <h2 className="block sm:hidden text-[15px] col-span-8  xl:text-lg 2xl:text-xl font-bold mb-1">
                   Bảng giá các dịch vụ khám và chữa bệnh:
                 </h2>
                 <p className="text-gray-500 text-[12px]   xl:text-lg 2xl:text-xl">
@@ -41,11 +45,11 @@ function Section3() {
             {/* Bảng */}
             <div  className=" sm:m-5 sm:mt-5 mt-1 ">
               {/* Table Head */}
-              <table className="sm:table-auto table-fixed text-center text-[9px] sm:text-[13px] md:text-[13px] xl:text-lg 2xl:text-xl w-full border-separate border-spacing-0">
+              <table className="sm:table-auto table-fixed text-center text-[9px] sm:text-[13px] md:text-[13px] xl:text-[16px] 2xl:text-[16px] w-full border-separate border-spacing-0">
                 <thead className="sticky overflow-y-auto top-0 z-10 rounded-t-xl">
                   <tr className="bg-gradient-to-r from-green-600 to-blue-400 text-white text-center">
-                    <th className="p-1 sm:p-2.5 border border-[#EBEBEB]  sm:w-[7%] whitespace-nowrap rounded-tl-xl" rowSpan="2">STT</th>
-                    <th className="p-1 sm:p-3 border border-[#EBEBEB] sm:w-[45.15%] whitespace-nowrap" rowSpan="2">Tên dịch vụ</th>
+                    <th className="p-1 sm:p-2.5 border border-[#EBEBEB] w-[10%]  sm:w-[7%] whitespace-nowrap rounded-tl-xl" rowSpan="2">STT</th>
+                    <th className="p-1 sm:p-3 border border-[#EBEBEB] sm:w-[45.15%] w-[35%] whitespace-nowrap" rowSpan="2">Tên dịch vụ</th>
                     <th className="p-1 sm:p-3.5 border border-[#EBEBEB]  text-center" colSpan="2">
                       GIÁ DỊCH VỤ DÀNH CHO NHỮNG KHÁCH HÀNG CÓ QUỐC TỊCH
                     </th>
@@ -61,7 +65,7 @@ function Section3() {
               </table>
               {/* Table Body with Scroll */}
               <div  className="scrollbar-custom overflow-y-auto max-h-[40vh] sm:max-h-[60vh]">
-                <table className="sm:table-auto table-fixed text-center text-[9px] sm:text-[13px] md:text-[13px] xl:text-lg 2xl:text-xl w-full border-separate border-spacing-0">
+                <table className="sm:table-auto table-fixed text-center text-[12px] sm:text-[13px] md:text-[13px] xl:text-lg 2xl:text-xl w-full border-separate border-spacing-0">
                   <tbody>
                     {[
                       ["1", "Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng", "200,000/giờ", "400,000/giờ"],
@@ -83,8 +87,8 @@ function Section3() {
                         key={i}
                         className="[&>td]:border-[1.5px] [&>td]:border-[#EBEBEB] hover:bg-gray-50"
                       >
-                        <td className="sm:p-3 p-1 sm:w-[7%]  opacity-60">{stt}</td>
-                        <td className="sm:p-3 p-1 sm:w-[45%]  opacity-60 text-left">{ten}</td>
+                        <td className="sm:p-3 p-1 sm:w-[7%] w-[10%] opacity-60">{stt}</td>
+                        <td className="sm:p-3 p-1 sm:w-[45%] w-[37%] opacity-60 text-left">{ten}</td>
                         <td className="sm:p-3 p-1 sm:w-[24%]  opacity-60">{vn}</td>
                         <td className="sm:p-3 p-1 sm:w-[24%] opacity-60">{nn}</td>
 
@@ -92,13 +96,13 @@ function Section3() {
                       </tr>
                     ))}
                     <tr className="[&>td]:border-[1.5px] [&>td]:border-[#EBEBEB] hover:bg-gray-50">
-                      <td className="sm:p-3 p-1 sm:w-[7%]  opacity-60">10</td>
-                        <td className="sm:p-3 p-1 sm:w-[45%]  opacity-60 text-left">Xét nghiệm tại nhà</td>
+                      <td className="sm:p-3 p-1 sm:w-[7%] w-[10%] opacity-60">10</td>
+                        <td className="sm:p-3 p-1 sm:w-[45%] w-[37%] opacity-60 text-left">Xét nghiệm tại nhà</td>
                         <td className="sm:p-3 p-1 sm:w-[24%]  opacity-60 text-center" colSpan={2}>Theo giá BVĐK</td>
                     </tr>
                     <tr className="[&>td]:border-[1.5px] [&>td]:border-[#EBEBEB] hover:bg-gray-50">
-                      <td className="sm:p-3 p-1 sm:w-[7%]  opacity-60 rounded-bl-xl">11</td>
-                        <td className="sm:p-3 p-1 sm:w-[45%]  opacity-60 text-left">Xét nghiệm tại nhà</td>
+                      <td className="sm:p-3 p-1 sm:w-[7%] w-[10%] opacity-60 rounded-bl-xl">11</td>
+                        <td className="sm:p-3 p-1 sm:w-[45%] w-[37%] opacity-60 text-left">Xét nghiệm tại nhà</td>
                         <td className="sm:p-3 p-1 sm:w-[24%]  opacity-60 text-center" >Theo giá BVĐK</td>
                         <td className="sm:p-3 p-1 sm:w-[24%]  opacity-60 text-center rounded-br-xl" >Theo giá BVĐK</td>
                     </tr>

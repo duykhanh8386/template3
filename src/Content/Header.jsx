@@ -62,7 +62,7 @@ function Header() {
            [&>img]:w-full [&>img]:h-full [&>img]:object-contain">
               <img src={Logo} width="100%" height='100%' alt="Logo" />
             </div></a>
-          <div className="sm:basis-[60%] font-roboto hidden sm:flex justify-around  font-bold">
+          <div className="sm:basis-[60%] font-roboto hidden sm:flex justify-around  font-medium">
             {menu.map(item => (
               <div className="h-10 flex text border-b-2 border-white sm:text-[10px] md:text-[12px] lg:text-base xl:text-[18px] 2xl:text-[18px]
               text-gray-900 items-center hover:text-green-400 hover:border-green-400 ">
@@ -73,10 +73,10 @@ function Header() {
          
          ">
             <div className="hidden sm:flex bg_button
-         shadow-lg text-white font-bold p-2 px-5 ml-2 
+         shadow-lg text-white p-2 px-5 ml-2 
          sm:text-[8px] md:text-[10px] lg:text-xs xl:text-base 2xl:text-base
          transition-all duration-300 ease-in-out
-  hover:scale-105 hover:shadow-xl
+  hover:shadow-xl
          ">
               <a href="tel:19001806" title="Hotline"><FontAwesomeIcon icon={faPhoneVolume} /> Hotline:1900 1806</a></div>
           </div>
