@@ -70,7 +70,7 @@ function Section5() {
     <>
       {/* Title + thanh dieu huong */}
       <div className="flex justify-around relative z-[2] sm:py-5 py-2 px-2 sm:px-0 items-center">
-        <div className="font-medium text-[13px] sm:text-[13px] md:text-[13px] lg:text-lg xl:text-4xl">Hình ảnh về cơ sở vật chất, trang thiết bị</div>
+        <div className="font-medium text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl 4k:text-4xl sm:pr-0 pr-3">Hình ảnh về cơ sở vật chất, trang thiết bị</div>
         {/* Custom Navigation Buttons */}
         <div className="flex sm:gap-4 gap-2 sm:mt-4 my-3  z-1">
           <button ref={prevRef} className="sm:w-8 w-6 bg_button sm:h-8 h-6 rounded-full cursor-pointer text-white flex items-center justify-center shadow-md hover:scale-105 transition">

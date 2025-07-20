@@ -10,13 +10,15 @@ function Layout() {
   
   return (
     <>
+    <div className="max-w-[100%] overflow-hidden">
       <Header/>
       <Banner/>
       <Section3/>
       <Section4/>
       <Section5/>
       <Section6/>
-      {/* <Section7/> */}
+      <Section7/>
+      </div>
     </>
   )
 }

@@ -11,7 +11,7 @@ function Section6() {
   return (
     <>
       <div className="w-full relative mb-5  ">
-        <div className="relative w-full h-full overflow-hidden">
+        
           <div
             className="
           absolute rounded-full border-[30px]
@@ -29,13 +29,13 @@ function Section6() {
           z-0
         "
           ></div>
-          
+
           <div className="4k:max-w-[75%] sm:max-w-[80%] max-w-[95%] mx-auto ">
             {/* Hình tròn */}
 
             {/* Title + thanh tim kiem bac si*/}
             <div className="flex justify-around z-20 sm:py-5 py-2 mb-0 xl:my-15 mx-auto items-center">
-              <div className="font-medium text-[13px] sm:text-[13px] md:text-[13px] lg:text-lg xl:text-4xl">Đội ngũ bác sĩ bệnh viện đa khoa Phương Đông</div>
+              <div className="font-medium text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl 4k:text-4xl">Đội ngũ bác sĩ bệnh viện đa khoa Phương Đông</div>
               {/* Custom Navigation Buttons */}
               <div className="relative flex items-center gap-2 transition-all">
                 {/* Nút Toggle */}
@@ -75,7 +75,7 @@ function Section6() {
                   <div className="aspect-[1] flex justify-center p-5 bg-gradient-to-r from-green-600 to-blue-400 rounded-full pt-16 relative z-0">
                     <div className="absolute bottom-0 z-[2]  rounded-b-full overflow-hidden">
                       {/* Ảnh bác sĩ – nổi phần đầu lên */}
-                      <img src={Doctor1} alt="Doctor" className="w-[85%] mx-auto aspect-[2/3]" />
+                      <img src={Doctor1} alt="Doctor" className="w-[85%] mx-auto " />
                     </div>
                   </div>
                 </div>
@@ -83,14 +83,14 @@ function Section6() {
                 <div className="flex w-full relative z-[1] justify-center ">
                   <div className="  col-span-1 mr-[5%]  text-left max-w-sm">
                     <h3 className="text-[15px] sm:text-[20px] md:text-[16px] lg:text-xl  4k:text-3xl font-medium">BS: NGUYỄN TRUNG CHÍNH</h3>
-                    <p className="text-gray-600 mt-1 text-[12px] sm:text-[16px] md:text-sm xl:text-sm ">
+                     <p className="text-gray-600 lg:mt-3 mt-1 text-[12px] opacity-70 sm:text-[16px] md:text-sm xl:text-sm ">
                       PGS.TS. Bác sĩ Ung bướu - Giám đốc Bệnh viện Đa khoa Phương Đông</p>
 
-                    <p className="lg:mt-3 font-medium text-[12px] sm:text-[16px] md:text-sm xl:text-sm 4k:text-[16px]">
-                      Kinh nghiệm: 20 năm
+                    <p className="lg:mt-3 mt-1 opacity-75 text-[12px] sm:text-[16px] md:text-sm xl:text-sm 4k:text-[16px]">
+                      Kinh nghiệm: <span className="font-medium">20 năm</span>
                     </p>
-                    <p className="lg:mt-1  flex gap-0.5 justify-start text-[12px] mb1:aspect-[10/1] sm:text-[16px] md:text-[13px] xl:text-sm ">
-                      <span className="flex items-center">Xếp hạng:</span> <img src={FiveStar} alt="" className="sm:aspect-1 " />
+                    <p className="lg:mt-3 mt-1  flex gap-0.5 justify-start text-[12px] mb1:aspect-[10/1] sm:text-[16px] md:text-[13px] xl:text-sm ">
+                      <span className="flex items-center opacity-75">Xếp hạng:</span> <img src={FiveStar} alt="" className="sm:aspect-1 " />
                     </p>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ function Section6() {
                   <div className="aspect-[1] flex justify-center p-5 bg-gradient-to-r from-green-600 to-blue-400 rounded-full pt-16 relative z-0">
                     <div className="absolute bottom-0 z-[2]  rounded-b-full overflow-hidden">
                       {/* Ảnh bác sĩ – nổi phần đầu lên */}
-                      <img src={Doctor2} alt="Doctor" className="w-[85%] mx-auto aspect-[2/3]" />
+                      <img src={Doctor2} alt="Doctor" className="w-[85%] mx-auto " />
                     </div>
                   </div>
                 </div>
@@ -112,14 +112,14 @@ function Section6() {
                 <div className="flex w-full relative z-[1] justify-center ">
                   <div className="  col-span-1 mr-[5%]  text-left max-w-sm">
                     <h3 className="text-[15px] sm:text-[20px] md:text-[16px] lg:text-xl  4k:text-3xl font-medium">BS: NGUYỄN HUY BẠO</h3>
-                    <p className="text-gray-600 mt-1 text-[12px] sm:text-[16px] md:text-sm xl:text-sm ">
+                     <p className="text-gray-600 lg:mt-3 mt-1 text-[12px] opacity-70 sm:text-[16px] md:text-sm xl:text-sm ">
                       PGS.TS. Bác sĩ Ung bướu - Phó giám đốc Bệnh viện Đa khoa Phương Đông</p>
 
-                    <p className="lg:mt-3 font-medium text-[12px] sm:text-[16px] md:text-sm xl:text-sm 4k:text-[16px]">
-                      Kinh nghiệm: 20 năm
+                    <p className="lg:mt-3 mt-1 opacity-75 text-[12px] sm:text-[16px] md:text-sm xl:text-sm 4k:text-[16px]">
+                      Kinh nghiệm: <span className="font-medium">20 năm</span>
                     </p>
-                    <p className="lg:mt-1  flex gap-0.5 justify-start text-[12px] mb1:aspect-[10/1] sm:text-[16px] md:text-[13px] xl:text-sm ">
-                      <span className="flex items-center">Xếp hạng:</span> <img src={FiveStar} alt="" className="sm:aspect-1 " />
+                    <p className="lg:mt-3 mt-1  flex gap-0.5 justify-start text-[12px] mb1:aspect-[10/1] sm:text-[16px] md:text-[13px] xl:text-sm ">
+                      <span className="flex items-center opacity-75">Xếp hạng:</span> <img src={FiveStar} alt="" className="sm:aspect-1 " />
                     </p>
                   </div>
                 </div></div>
@@ -130,14 +130,14 @@ function Section6() {
                 <div className="flex w-full relative z-[1] justify-center ">
                   <div className="  col-span-1 mr-[5%]  text-left max-w-sm">
                     <h3 className="text-[15px] sm:text-[20px] md:text-[16px] lg:text-xl  4k:text-3xl font-medium">BS: TRẦN KINH TRANG</h3>
-                    <p className="text-gray-600 mt-1 text-[12px] sm:text-[16px] md:text-sm xl:text-sm ">
+                     <p className="text-gray-600 lg:mt-3 mt-1 text-[12px] opacity-70 sm:text-[16px] md:text-sm xl:text-sm ">
                       PGS.TS. Bác sĩ Ung bướu - Phó giám đốc Bệnh viện Đa khoa Phương Đông</p>
 
-                    <p className="lg:mt-3 font-medium text-[12px] sm:text-[16px] md:text-sm xl:text-sm 4k:text-[16px]">
-                      Kinh nghiệm: 20 năm
+                    <p className="lg:mt-3 mt-1 opacity-75 text-[12px] sm:text-[16px] md:text-sm xl:text-sm 4k:text-[16px]">
+                      Kinh nghiệm: <span className="font-medium">20 năm</span>
                     </p>
-                    <p className="lg:mt-1  flex gap-0.5 justify-start text-[12px] mb1:aspect-[10/1] sm:text-[16px] md:text-[13px] xl:text-sm ">
-                      <span className="flex items-center">Xếp hạng:</span> <img src={FiveStar} alt="" className="sm:aspect-1 " />
+                    <p className="lg:mt-3 mt-1  flex gap-0.5 justify-start text-[12px] mb1:aspect-[10/1] sm:text-[16px] md:text-[13px] xl:text-sm ">
+                      <span className="flex items-center opacity-75">Xếp hạng:</span> <img src={FiveStar} alt="" className="sm:aspect-1 " />
                     </p>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ function Section6() {
                   <div className="aspect-[1] flex justify-center p-5 bg-gradient-to-r from-green-600 to-blue-400 rounded-full pt-16 relative z-0">
                     <div className="absolute bottom-0 z-[2]  rounded-b-full overflow-hidden">
                       {/* Ảnh bác sĩ – nổi phần đầu lên */}
-                      <img src={Doctor3} alt="Doctor" className="w-[85%] mx-auto aspect-[2/3]" />
+                      <img src={Doctor3} alt="Doctor" className="w-[85%] mx-auto " />
                     </div>
                   </div>
                 </div></div>
@@ -159,14 +159,14 @@ function Section6() {
                 <div className="flex w-full relative z-[1] justify-center ">
                   <div className="  col-span-1 mr-[5%]  text-left max-w-sm">
                     <h3 className="text-[15px] sm:text-[20px] md:text-[16px] lg:text-xl  4k:text-3xl font-medium">DS: NGUYỄN THỊ KIM YẾN</h3>
-                    <p className="text-gray-600 mt-1 text-[12px] sm:text-[16px] md:text-sm xl:text-sm ">
+                    <p className="text-gray-600 lg:mt-3 mt-1 text-[12px] opacity-70 sm:text-[16px] md:text-sm xl:text-sm ">
                       PGS.TS. Bác sĩ Ung bướu - Phó giám đốc Bệnh viện Đa khoa Phương Đông</p>
 
-                    <p className="lg:mt-3 font-medium text-[12px] sm:text-[16px] md:text-sm xl:text-sm 4k:text-[16px]">
-                      Kinh nghiệm: 20 năm
+                    <p className="lg:mt-3 mt-1 opacity-75 text-[12px] sm:text-[16px] md:text-sm xl:text-sm 4k:text-[16px]">
+                      Kinh nghiệm: <span className="font-medium">20 năm</span>
                     </p>
-                    <p className="lg:mt-1  flex gap-0.5 justify-start text-[12px] mb1:aspect-[10/1] sm:text-[16px] md:text-[13px] xl:text-sm ">
-                      <span className="flex items-center">Xếp hạng:</span> <img src={FiveStar} alt="" className="sm:aspect-1 " />
+                    <p className="lg:mt-3 mt-1  flex gap-0.5 justify-start text-[12px] mb1:aspect-[10/1] sm:text-[16px] md:text-[13px] xl:text-sm ">
+                      <span className="flex items-center opacity-75">Xếp hạng:</span> <img src={FiveStar} alt="" className="sm:aspect-1 " />
                     </p>
                   </div>
                 </div>
@@ -177,7 +177,7 @@ function Section6() {
                   <div className="aspect-[1] flex justify-center p-5 bg-gradient-to-r from-green-600 to-blue-400 rounded-full pt-16 relative z-0">
                     <div className="absolute bottom-0 z-[2]  rounded-b-full overflow-hidden">
                       {/* Ảnh bác sĩ – nổi phần đầu lên */}
-                      <img src={Doctor4} alt="Doctor" className="w-[85%] object-contain mx-auto aspect-[2/3]" />
+                      <img src={Doctor4} alt="Doctor" className="w-[85%] object-contain mx-auto " />
                     </div>
                   </div>
                 </div></div>
@@ -185,8 +185,8 @@ function Section6() {
             </div>
 
           </div>
-<div
-          className="
+          <div
+            className="
           absolute rounded-full border-[30px]
           xl:border-[100px] 
            sm:border-[40px]
@@ -198,29 +198,27 @@ function Section6() {
           md:w-[300px] md:h-[300px]
           lg:w-[450px] lg:h-[450px]
           xl:w-[600px] xl:h-[600px]
-          right-[-20%] top-[45%]
+          right-[-20%] top-[85%]
           z-0
         "
-        >
-        </div>{
+          >
+          </div>{
         /* Section tiep */}
-        <div className="max-w-[78%] mx-auto my-50 ">
-              
-                <div className="grid  grid-cols-2">
-                  <div className="relative z-[1] aspect-[4/3]">
-                    <img src={Baby1} alt="Baby1" className="lg:rounded-[80px] rounded-4xl rounded-br-none lg:rounded-br-none"/>
-                  </div>
-                </div>
-        
-            </div>
-        </div>
-        
-        
-        
-       
+          {/* <div className="sm:max-w-[78%] max-w-[95%] mx-auto xl:mt-[10%] lg:mt-[15%] md:mt-[15%] sm:mt-[50%] md4:mt-[55%] mb2:mt-[60%] mb1:mt-[65%]">
 
-      </div> 
+            <div className="grid  grid-cols-2">
+              <div className="relative z-[1] aspect-[4/3]">
+                <img src={Baby1} alt="Baby1" className="lg:rounded-[80px] rounded-4xl rounded-br-none lg:rounded-br-none" />
+              </div>
+            </div>
+
+          </div> */}
+
+
+
+        </div>
       
+
     </>
   )
 }

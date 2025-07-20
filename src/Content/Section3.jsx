@@ -11,12 +11,12 @@ function Section3() {
     <>
       <div className="bg-[linear-gradient(90deg,_#73D090_0%,_#C4EACE_0.01%,_#53CAFB_100%)] relative overflow-hidden z-0 py-13 ">
 
-        <div className="max-w-7xl mx-auto sm:px-4 ">
-          <div className="bg-white shadow-lg relative rounded-b-2xl sm:pt-5 z-10">
+        <div className=" w-full ">
+          <div className="bg-white 4k:max-w-[75%] sm:max-w-[80%] max-w-[95%] mx-auto shadow-lg relative rounded-b-2xl sm:pt-5 z-10">
 
             {/* Tiêu đề */}
             <div className="grid grid-cols-8 gap-1 items-center sm:px-6 px-2 sm:py-4 py-2 pb-0 sm:pb-4 text-center relative">
-              <h2 className="sm:block hidden text-[15px] col-span-8  xl:text-lg 2xl:text-xl font-bold mb-1">
+              <h2 className="sm:block hidden text-[15px] col-span-8  xl:text-lg 2xl:text-xl font-medium mb-1">
                   Bảng giá các dịch vụ khám và chữa bệnh:
                 </h2>
               {/* Logo bên trái */}
@@ -30,7 +30,7 @@ function Section3() {
               {/* Tiêu đề ở giữa */}
                
               <div className="sm:col-start-3 sm:col-end-7  col-span-8 place-items-center">
-                <h2 className="block sm:hidden text-[15px] col-span-8  xl:text-lg 2xl:text-xl font-bold mb-1">
+                <h2 className="block sm:hidden text-[15px] col-span-8  xl:text-lg 2xl:text-xl font-medium mb-1">
                   Bảng giá các dịch vụ khám và chữa bệnh:
                 </h2>
                 <p className="text-gray-500 text-[12px]   xl:text-lg 2xl:text-xl">

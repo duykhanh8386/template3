@@ -26,7 +26,7 @@ const handleCloseModal = () => {
           <div className="hidden lg:block lg z-[2] absolute bg-white xl:right-[-80%] lg:right-[-50%] 
             lg:mt-0 lg:col-start-auto shadow-xl 4k:right-[-50%]
               drop-shadow-2xl rounded-3xl rounded-bl-none sm:p-5 p-3 sm:max-w-md lg:max-w-sm xl:max-w-2xl">
-            <div className="font-bold px-1 sm:px-2 py-3 text-[13px] sm:text-[13px] md:text-[13px] lg:text-lg xl:text-4xl ">Bệnh viên Phương Đông tiên phong
+            <div className=" px-1 sm:px-2 py-3 font-medium text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl 4k:text-4xl">Bệnh viên Phương Đông tiên phong
               trong dịch vụ thai sản trọn gói</div>
             <div className="opacity-60 px-1 text-[9px] sm:text-xs md:text-xs lg:text-sm xl:text-base sm:px-2 pb-3">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est earum dicta ut repellendus omnis. Earum exercitationem nam eveniet, nesciunt velit temporibus nobis explicabo, porro maiores iure consequuntur, quod modi non.
@@ -63,7 +63,7 @@ const handleCloseModal = () => {
         {/* text box tu lg do xuong dung grid */}
         <div className="block lg:hidden z-[1]   bg-white lg:mt-0  sm:col-span-4 shadow-xl  
       drop-shadow-2xl rounded-3xl rounded-bl-none sm:p-5 p-3 sm:max-w-md ">
-          <div className="font-medium px-1 sm:px-2 py-3 text-[13px] sm:text-[13px] md:text-[13px] lg:text-lg xl:text-4xl ">Bệnh viên Phương Đông tiên phong
+          <div className="font-medium px-1 sm:px-2 py-3 text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl 4k:text-4xl ">Bệnh viên Phương Đông tiên phong
             trong dịch vụ thai sản trọn gói</div>
           <div className="opacity-60 px-1 text-[12px] sm:text-xs md:text-xs lg:text-sm xl:text-base sm:px-2 pb-3">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est earum dicta ut repellendus omnis. Earum exercitationem nam eveniet, nesciunt velit temporibus nobis explicabo, porro maiores iure consequuntur, quod modi non.

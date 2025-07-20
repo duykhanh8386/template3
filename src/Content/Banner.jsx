@@ -63,12 +63,12 @@ function Banner() {
         ></div>
         <div className="overflow-hidden">
           {/* Nội dung section1 */}
-          <div className="relative ml-auto w-full xl:py-5 z-10 text-center pt-4 lg:pt-8 flex  p-1 sm:p-6 md:p-6 lg:p-8 xl:p-10 2xl:p-10 !pr-0">
+          <div className="relative ml-auto 4k:max-w-[75%] sm:max-w-[90%] max-w-[95%] xl:py-5 z-10 text-center pt-4 lg:pt-8 flex  !pr-0">
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 sm:gap-4 md:gap-2 gap-0">
 
-              <div className="md:col-span-3 lg:col-span-4 xl:col-span-2 px-0 sm:px-6 lg:px-8 text-left">
-                <h1 className="font-medium sm:py-2.5 py-0 text-[20px] sm:text-[20px] md:text-[20px] lg:text-xl xl:text-4xl 2xl:text-4xl">Chương trình ưu đãi:</h1>
-                <p className="text-gray-600  opacity-60 py-1.5 text-justify 2xl:text-lg xl:text-lg lg:text-base text sm:text-[10px] md:text-[12px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, numquam rerum inventore maxime quos sint dolores nobis reprehenderit.
+              <div className="md:col-span-3 lg:col-span-4 xl:col-span-2 px-0 sm:pr-6 lg:pr-8 text-left">
+                <h1 className="font-medium sm:py-2.5 pr-0  text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl 4k:text-4xl">Chương trình ưu đãi:</h1>
+                <p className="text-gray-600 pr-2.5 opacity-60  text-justify 2xl:text-lg xl:text-lg lg:text-base text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, numquam rerum inventore maxime quos sint dolores nobis reprehenderit.
                   Quod debitis alias earum placeat blanditiis quia inventore iste, numquam magnam veniam.</p>
                 {/* Custom Navigation Buttons */}
                 <div className="flex col-span-1 gap-4 sm:mt-4 my-3 justify-center xl:justify-start z-50">
@@ -217,60 +217,60 @@ function Banner() {
 
 
         {/* Section2 */}
-        <div className="grid grid-cols-1 mb-5 lg:mb-0 xl:py-15 relative sm:grid-cols-2 pt-4 mx-5 lg:pt-8 gap-5 sm:ml-6 md:ml-6 lg:ml-8 xl:ml-20 2xl:ml-20 ">
+        <div className="grid grid-cols-1 mb-5 lg:mb-0 xl:py-15 relative sm:grid-cols-2 pt-4 lg:pt-8 gap-5 4k:max-w-[75%] sm:max-w-[80%] max-w-[95%] mx-auto">
 
 
-          <div className="w-full aspect-[1] [&>img]:w-full z-[1] [&>img]:object-cover col-span-1 overflow-hidden [&>img]:rounded-4xl [&>img]:h-[100%]">
-            <img src={Doctor} alt="Doctors" />
+          <div className="w-full  h-full [&>img]:w-full z-[1] [&>img]:object-cover col-span-1 overflow-hidden [&>img]:rounded-4xl [&>img]:h-full">
+            <img src={Doctor} alt="Doctors" className=""/>
           </div>
           <div className="col-span-1 relative z-[1] self-center overflow-hidden">
-            <h3 className="font-roboto font-medium py-2.5 text-[20px] sm:text-[20px] md:text-[20px] lg:text-2xl xl:text-4xl 2xl:text-4xl">Dịch vụ thai sản trọn gói</h3>
-            <p className="xl:text-[16px] my-1.5 2xl:text-lg xl:text-lg lg:text-base text sm:text-[10px] md:text-[12px] opacity-60">Mang thai và sinh nở là một hành trình vô cùng kỳ diệu nhưng cũng lắm mệt mỏi, áp lực, thậm chí là nguy hiểm. Thấu hiểu nỗi niềm đó, dịch vụ thai sản trọn gói Phương Đông nhằm mang tới trải nghiệm nhẹ nhàng, an tâm cho người mẹ trong suốt thai kỳ, ngày vượt cạn đến sau sinh và sự chăm sóc toàn diện với em bé ngay từ giây phút đầu tiên chào đời.</p>
+            <h3 className="font-roboto sm:py-2.5 font-medium text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl 4k:text-4xl ">Dịch vụ thai sản trọn gói</h3>
+            <p className="xl:text-[16px] my-1.5 2xl:text-lg xl:text-lg lg:text-base text-[12px] opacity-60">Mang thai và sinh nở là một hành trình vô cùng kỳ diệu nhưng cũng lắm mệt mỏi, áp lực, thậm chí là nguy hiểm. Thấu hiểu nỗi niềm đó, dịch vụ thai sản trọn gói Phương Đông nhằm mang tới trải nghiệm nhẹ nhàng, an tâm cho người mẹ trong suốt thai kỳ, ngày vượt cạn đến sau sinh và sự chăm sóc toàn diện với em bé ngay từ giây phút đầu tiên chào đời.</p>
             <div className="flex items-center py-1 sm:p-1.5 gap-1">
               <div className="w-3 m-1 h-3 rounded-full bg-[linear-gradient(90deg,_#73D090_0%,_#C4EACE_0.01%,_#53CAFB_100%)] flex-none order-0 flex-grow-0"></div>
-              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text sm:text-[10px] md:text-[12px] ">Đội ngũ bác sĩ sản khoa giàu kinh nghiệm</div>
+              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text-[12px] ">Đội ngũ bác sĩ sản khoa giàu kinh nghiệm</div>
             </div>
 
             {/* Item 2 */}
             <div className="flex items-center py-1 sm:p-1.5 gap-1 sm:ml-4">
               <div className="w-3 m-1 h-3 rounded-full bg-[linear-gradient(90deg,_#73D090_0%,_#C4EACE_0.01%,_#53CAFB_100%)] flex-none order-0 flex-grow-0"></div>
-              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text sm:text-[10px] md:text-[12px]">Chăm sóc mẹ và bé toàn diện trước trong và sau sinh</div>
+              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text text-[12px]">Chăm sóc mẹ và bé toàn diện trước trong và sau sinh</div>
             </div>
 
             {/* Item 3 */}
             <div className="flex items-center py-1 sm:p-1.5 gap-1">
               <div className="w-3 m-1 h-3 rounded-full bg-[linear-gradient(90deg,_#73D090_0%,_#C4EACE_0.01%,_#53CAFB_100%)] flex-none order-0 flex-grow-0"></div>
-              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text sm:text-[10px] md:text-[12px]">Không gian đẳng cấp với trang tihiết bị y tế hiện đại</div>
+              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text-[12px]">Không gian đẳng cấp với trang tihiết bị y tế hiện đại</div>
             </div>
 
             {/* Item 4 */}
             <div className="flex items-center py-1 sm:p-1.5 gap-1 sm:ml-4">
               <div className="w-3 m-1 h-3 rounded-full bg-[linear-gradient(90deg,_#73D090_0%,_#C4EACE_0.01%,_#53CAFB_100%)] flex-none order-0 flex-grow-0"></div>
-              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text sm:text-[10px] md:text-[12px]">Đi sinh sung sướng như đi nghỉ dưỡng</div>
+              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text-[12px]">Đi sinh sung sướng như đi nghỉ dưỡng</div>
             </div>
 
             {/* Item 5 */}
             <div className="flex items-center py-1 sm:p-1.5 gap-1 ">
               <div className="w-3 m-1 h-3 rounded-full bg-[linear-gradient(90deg,_#73D090_0%,_#C4EACE_0.01%,_#53CAFB_100%)] flex-none order-0 flex-grow-0"></div>
-              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text sm:text-[10px] md:text-[12px]">Con yêu chào đời với những điều kiện tốt nhất</div>
+              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text-[12px]">Con yêu chào đời với những điều kiện tốt nhất</div>
             </div>
 
             {/* Item 6 */}
             <div className="flex items-center py-1 sm:p-1.5 gap-1 sm:ml-4">
               <div className="w-3 m-1 h-3 rounded-full bg-[linear-gradient(90deg,_#73D090_0%,_#C4EACE_0.01%,_#53CAFB_100%)] flex-none order-0 flex-grow-0"></div>
-              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text sm:text-[10px] md:text-[12px]">Thanh toán đồng thời bảo hiểm Y tế, bảo hiểm bảo lãnh</div>
+              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text-[12px]">Thanh toán đồng thời bảo hiểm Y tế, bảo hiểm bảo lãnh</div>
             </div>
 
             {/* Item 7 */}
             <div className="flex items-center py-1 sm:p-1.5 gap-1 ">
               <div className="w-3 m-1 h-3 rounded-full bg-[linear-gradient(90deg,_#73D090_0%,_#C4EACE_0.01%,_#53CAFB_100%)] flex-none order-0 flex-grow-0"></div>
-              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text sm:text-[10px] md:text-[12px]">Bảng giá các gói sinh tại Bệnh viện Phương Đông</div>
+              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text-[12px]">Bảng giá các gói sinh tại Bệnh viện Phương Đông</div>
             </div>
 
             {/* Item 8 */}
             <div className="flex items-center py-1 sm:p-1.5 gap-1 sm:ml-4">
               <div className="w-3 m-1 h-3 rounded-full bg-[linear-gradient(90deg,_#73D090_0%,_#C4EACE_0.01%,_#53CAFB_100%)] flex-none order-0 flex-grow-0"></div>
-              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text sm:text-[10px] md:text-[12px]">Bảng giá các gói sinh tại Bệnh viện Phương Đông</div>
+              <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text-[12px]">Bảng giá các gói sinh tại Bệnh viện Phương Đông</div>
             </div>
             <div className="sm:px-1.5 sm:py-0.5 mt-3 sm:mt-5 flex justify-center sm:justify-start"><a href="tel:1900 1806" className={` px-2 py-1.5  sm:px-6 sm:py-2.5 rounded-full font-bold transition-all duration-300 ease-in-out 
                             text-[13px] 
