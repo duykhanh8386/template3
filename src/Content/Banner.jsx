@@ -3,13 +3,13 @@ import baby from "../heplers/img/Baby.jpg"
 import Doctor from "../heplers/img/Doctor.jpg"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 function Banner() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-
+const [delayedActiveIndex, setDelayedActiveIndex] = useState(null);
   const handleShowModal = () => {
     setShowModal(true);
   };
@@ -24,9 +24,16 @@ function Banner() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperRef = useRef(null);
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setDelayedActiveIndex(activeIndex);
+  }, 200); // Delay 200ms khi hover mới được active
+
+  return () => clearTimeout(timer);
+}, [activeIndex]);
   return (
     <>
-      <div className="  w-full aspect-[3/1] relative overflow-hidden
+      <div className="  w-full aspect-[3/1] relative overflow-hidden mt-[66px]
           [&>img]:h-full  [&>img]:w-full
      [&>img]:object-cover
      ">
@@ -63,7 +70,7 @@ function Banner() {
         ></div>
         <div className="overflow-hidden">
           {/* Nội dung section1 */}
-          <div className="relative ml-auto 4k:max-w-[75%] sm:max-w-[90%] max-w-[95%] xl:py-5 z-10 text-center pt-4 lg:pt-8 flex  !pr-0">
+          <div className="relative ml-auto 4k:max-w-[75%] sm:max-w-[90%] max-w-[95%] xl:py-5 z-[2] text-center pt-4 lg:pt-8 flex  !pr-0">
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 sm:gap-4 md:gap-2 gap-0">
 
               <div className="md:col-span-3 lg:col-span-4 xl:col-span-2 px-0 sm:pr-6 lg:pr-8 text-left">
@@ -72,43 +79,48 @@ function Banner() {
                   Quod debitis alias earum placeat blanditiis quia inventore iste, numquam magnam veniam.</p>
                 {/* Custom Navigation Buttons */}
                 <div className="flex col-span-1 gap-4 sm:mt-4 my-3 justify-center xl:justify-start z-50">
-                  <button ref={prevRef} className="w-8 h-8 cursor-pointer rounded-full bg-gradient-to-b from-orange-400 to-orange-600 bg_button text-white flex items-center justify-center shadow-md hover:scale-105 transition">
-                    <FaChevronLeft size={12} />
+                  <button
+                    ref={prevRef}
+                    className="transition-all duration-100 hover:scale-110 w-8 h-8 rounded-full bg_button text-white shadow-md flex items-center justify-center"
+                  >
+                    <FaChevronLeft size={14} />
                   </button>
-                  <button ref={nextRef} className="w-8 h-8 cursor-pointer rounded-full bg-gradient-to-b from-orange-400 to-orange-600 bg_button text-white flex items-center justify-center shadow-md hover:scale-105 transition">
-                    <FaChevronRight size={12} />
+
+                  <button
+                    ref={nextRef}
+                    className="transition-all duration-100 hover:scale-110 w-8 h-8 rounded-full bg_button text-white shadow-md flex items-center justify-center"
+                  >
+                    <FaChevronRight size={14} />
                   </button>
+
                 </div>
               </div>
 
 
 
               {/* Bên phải: Slider */}
-              <div className="lg:col-span-4 col-span-4 relative  overflow-visible">
-                <Swiper loop={true}
-                  modules={[Navigation, Pagination]}
+              <div className="lg:col-span-4 col-span-4 relative  ">
+                <Swiper
+                  modules={[Navigation]}
                   navigation={{
                     prevEl: prevRef.current,
                     nextEl: nextRef.current,
                   }}
-
-                  speed={700} // 👈 Thêm dòng này để tăng độ mượt
-                  effect="slide"
                   onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                   onSwiper={(swiper) => (swiperRef.current = swiper)}
                   onInit={(swiper) => {
-
-                    if (prevRef.current && nextRef.current) {
-                      swiper.params.navigation.prevEl = prevRef.current;
-                      swiper.params.navigation.nextEl = nextRef.current;
-                      swiper.navigation.init();
-                      swiper.navigation.update();
-                    }
+                    // gắn navigation refs
+                    swiper.params.navigation.prevEl = prevRef.current;
+                    swiper.params.navigation.nextEl = nextRef.current;
+                    swiper.navigation.init();
+                    swiper.navigation.update();
                   }}
-                  pagination={{ clickable: true }}
-                  centeredSlides={false}
-                  spaceBetween={20}
-
+                  speed={100} // ✅ tốc độ mượt như bản demo
+                  
+                  effect="slide"
+                  watchOverflow={true}
+                  grabCursor={true}
+                  loop={true}
                   breakpoints={{
 
                     320: { slidesPerView: 1.5 },
@@ -119,15 +131,13 @@ function Banner() {
                   }}
                   className="!px-0 !pb-6"
                 >
-
-                  {[1, 2, 3, 4].map((_, index) => (
-                    <SwiperSlide key={index} >
+                  {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((_,index) => (
+                    <SwiperSlide key={index}  className="mx-1"  onMouseEnter={() => setActiveIndex(index)}>
 
 
                       <div
                         onMouseEnter={() => setActiveIndex(index)}
-                        className={`transition-all duration-300 h-[250px] sm:h-[450px] flex flex-col items-center rounded-br-4xl rounded-tl-4xl text-center bg-white shadow-md hover:shadow-xl border-0`}
-                      >
+                        className='transition-all duration-300 h-[250px] sm:h-[450px] flex flex-col items-center rounded-br-4xl rounded-tl-4xl text-center bg-white shadow-md hover:shadow-xl border-0'>
 
                         <div className="w-full relative aspect-[3/4] overflow-hidden rounded-tl-4xl">
                           <img
@@ -136,25 +146,25 @@ function Banner() {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <div className={`${index === activeIndex ? "bg-[linear-gradient(90deg,_#26BA5F_0%,_#26BA5F_0.01%,_#08B2FB_100%)]" : "bg-white"} 
-                      transition-all duration-500 ease-in-out
-                      p-3 rounded-t-3xl relative -mt-6 z-50  bg-amber-50 h-auto w-full rounded-br-4xl`}>
+                        <div className={` ${index === delayedActiveIndex  ? "bg-main-gradient animate-gradient " : "bg-white"}
+                       
+                      p-3 rounded-t-3xl relative -mt-6 z-50  h-auto w-full rounded-br-4xl`}>
                           <h1 className={`${index === activeIndex
                             ? ' bg-white opacity-100 scale-100'
-                            : 'opacity-70 scale-95 bg-[linear-gradient(90deg,_#26BA5F_0%,_#26BA5F_0.01%,_#08B2FB_100%)]'
-                            } font-sale transition-all duration-500 ease-in-out  text-[16px] sm:text-[22px] md:text-[22px] lg:text-xl xl:text-[32px] 2xl:text-[36px] text-sm sm:text-base
+                            : 'opacity-70 bg-[linear-gradient(90deg,_#26BA5F_0%,_#26BA5F_0.01%,_#08B2FB_100%)]'
+                            } font-sale transition-all duration-400 ease-in-out  text-[16px] sm:text-[22px] md:text-[22px] lg:text-xl xl:text-[32px] 2xl:text-[36px] text-sm sm:text-base
                                  `}>Ưu đãi 50%</h1>
-                          <h3 className={` ${index === activeIndex ? "text-transparent opacity-100 scale-100 bg-clip-text bg-white" : "opacity-70 scale-95"} text-[12px] transition-all duration-500 ease-in-out font-sans sm:text-[13px] md:text-[16px] lg:text-xl xl:text-xl 2xl:text-xl font-bold `}>Gói khám thai tổng quát</h3>
-                          <p className={`${index === activeIndex ? "text-transparent opacity-100 scale-100 bg-clip-text bg-white" : "opacity-70 scale-95 text-gray-500"} transition-all duration-500 ease-in-out text-center text-[12px] sm:text-[13px] md:text-[13px] xl:text-lg 2xl:text-xl mt-1 px-2`}>
+                          <h3 className={` ${index === activeIndex ? "text-white opacity-100" : "opacity-70 "} text-[12px] transition-all duration-400 font-sans sm:text-[13px] md:text-[16px] lg:text-xl xl:text-xl 2xl:text-xl font-medium `}>Gói khám thai tổng quát</h3>
+                          <p className={`${index === activeIndex ? "text-white opacity-100" : "opacity-70  text-gray-500"}  transition-all duration-400 text-center text-[12px] sm:text-[13px] md:text-[13px] xl:text-lg 2xl:text-xl mt-1 px-2`}>
                             Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.
                           </p>
                           <div onClick={handleShowModal} className=" m-0 sm:m-2
                                    ">
-                            <button className={`w-full py-0.5 px-0.5 sm:px-4 sm:py-1.5 rounded-full font-bold transition-all duration-300 ease-in-out 
+                            <button className={`w-full px-4 py-1.5 rounded-full font-medium transition-all duration-300 ease-in-out 
                             text-[12px]  sm:text-[13px] md:text-[13px] lg:text-[16px] cursor-pointer 
                               ${index === activeIndex
-                                ? 'bg_button border  text-white border-[var(--main-color-to)]  shadow-md hover:bg-gradient-to-b hover:from-[var(--main-color-hover-from)] hover:to-[var(--main-color-hover-to)]'
-                                : 'border border-[var(--main-color-to)] text-[var(--main-color-to)] bg-white hover:bg-orange-50'
+                                ? 'bg_button border  text-white border-[var(--main-color-to)]  shadow-md '
+                                : 'border border-[var(--main-color-to)] text-[var(--main-color-to)] bg-white '
                               }
                               `}>Đăng ký nhận ưu đãi</button>
                           </div>
@@ -185,7 +195,7 @@ function Banner() {
                  duration-300 ease-out scale-100 ${isClosing ? 'animate-[fadeOut_0.3s_ease-in]' : 'animate-[scaleIn_0.3s_ease-out]'}`}>
                   <button
                     onClick={handleCloseModal}
-                    className="absolute -top-3 -right-3 w-8 h-8 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center text-lg font-bold shadow-lg transition-all duration-200 hover:scale-110"
+                    className="absolute -top-4 -right-4 w-8 h-8 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center text-lg font-bold shadow-lg transition-all duration-200 hover:scale-110"
                   >
                     ×
                   </button>
@@ -221,7 +231,7 @@ function Banner() {
 
 
           <div className="w-full  h-full [&>img]:w-full z-[1] [&>img]:object-cover col-span-1 overflow-hidden [&>img]:rounded-4xl [&>img]:h-full">
-            <img src={Doctor} alt="Doctors" className=""/>
+            <img src={Doctor} alt="Doctors" className="" />
           </div>
           <div className="col-span-1 relative z-[1] self-center overflow-hidden">
             <h3 className="font-roboto sm:py-2.5 font-medium text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl 4k:text-4xl ">Dịch vụ thai sản trọn gói</h3>
@@ -272,7 +282,7 @@ function Banner() {
               <div className="w-3 m-1 h-3 rounded-full bg-[linear-gradient(90deg,_#73D090_0%,_#C4EACE_0.01%,_#53CAFB_100%)] flex-none order-0 flex-grow-0"></div>
               <div className="font-medium 2xl:text-lg xl:text-lg lg:text-base text-[12px]">Bảng giá các gói sinh tại Bệnh viện Phương Đông</div>
             </div>
-            <div className="sm:px-1.5 sm:py-0.5 mt-3 sm:mt-5 flex justify-center sm:justify-start"><a href="tel:1900 1806" className={` px-2 py-1.5  sm:px-6 sm:py-2.5 rounded-full font-bold transition-all duration-300 ease-in-out 
+            <div className="sm:px-1.5 sm:py-0.5 mt-3 sm:mt-5 flex justify-center sm:justify-start"><a href="tel:1900 1806" className={` px-3 py-1.5  sm:px-6 sm:py-2.5 rounded-full font-bold transition-all duration-300 ease-in-out 
                             text-[13px] 
                              sm:text-[13px] md:text-[13px] lg:text-[16px] bg_button text-white shadow-md hover:bg-gradient-to-b hover:from-[var(--main-color-hover-from)] hover:to-[var(--main-color-hover-to)]`}
             >Liên hệ</a></div>
@@ -304,4 +314,4 @@ function Banner() {
   )
 }
 export default Banner;
-// section 3 , liên hệ, 
+// backround ?? không biết khắc phục hơn như hướng nào để đỡ lóa

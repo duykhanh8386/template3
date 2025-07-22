@@ -69,36 +69,41 @@ function Section5() {
   return (
     <>
       {/* Title + thanh dieu huong */}
-      <div className="flex justify-around relative z-[2] sm:py-5 py-2 px-2 sm:px-0 items-center">
+      <div className="flex justify-around relative z-[1] sm:py-5 py-2 px-2 sm:px-0 items-center">
         <div className="font-medium text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl 4k:text-4xl sm:pr-0 pr-3">Hình ảnh về cơ sở vật chất, trang thiết bị</div>
         {/* Custom Navigation Buttons */}
         <div className="flex sm:gap-4 gap-2 sm:mt-4 my-3  z-1">
-          <button ref={prevRef} className="sm:w-8 w-6 bg_button sm:h-8 h-6 rounded-full cursor-pointer text-white flex items-center justify-center shadow-md hover:scale-105 transition">
-            <FaChevronLeft size={12} />
-          </button>
-          <button ref={nextRef} className="sm:w-8 w-6  bg_button sm:h-8 h-6 rounded-full cursor-pointer text-white flex items-center justify-center shadow-md hover:scale-105 transition">
-            <FaChevronRight size={12} />
-          </button>
+          <button
+                    ref={prevRef}
+                    className="transition-all duration-100 hover:scale-110 w-8 h-8 rounded-full bg_button text-white shadow-md flex items-center justify-center"
+                  >
+                    <FaChevronLeft size={14} />
+                  </button>
+
+                  <button
+                    ref={nextRef}
+                    className="transition-all duration-100 hover:scale-110 w-8 h-8 rounded-full bg_button text-white shadow-md flex items-center justify-center"
+                  >
+                    <FaChevronRight size={14} />
+                  </button>
         </div>
       </div>
       {/* Slider */}
-      <div className="relative z-1 overflow-visible">
+      <div className="relative z-[2] overflow-visible">
         <Swiper loop={true}
-          modules={[Navigation, Pagination]}
+          modules={[Navigation]}
           loopedSlides={7}
           watchSlidesProgress={true}
           watchOverflow={true}
           grabCursor={true}
-          speed={600} // 👈 Thêm dòng này để tăng độ mượt
+          speed={100} // 👈 Thêm dòng này để tăng độ mượt
           effect="slide"
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-          }}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+                 
           pagination={{ clickable: true }}
           centeredSlides={false}
           spaceBetween={20}
           slidesPerView={3.2}
-
           breakpoints={{
             425: { slidesPerView: 3.8 },
             640: { slidesPerView: 4.2 },
@@ -127,20 +132,52 @@ function Section5() {
               </div>
             </SwiperSlide>
           ))}
+
+          
+        
+      
         </Swiper>
+       {isOpen && (
+  <div
+    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[50] flex items-center justify-center"
+    onClick={() => setIsOpen(false)}
+  >
+    <div
+      className="w-[90%] h-[90%] flex items-center justify-center"
+      onClick={(e) => {e.stopPropagation()
+       
+      }} // tránh tắt khi click ảnh
+    >
+      <Swiper
+        loop={true}
+        modules={[Navigation, Pagination]}
+        speed={200}
+        effect="slide"
+        pagination={{ clickable: true }}
+        centeredSlides={true}
+        spaceBetween={30}
+        slidesPerView={1}
+        initialSlide={image.findIndex(img => img.src === imageSrc)}
+        className="w-full h-full"
+      >
+        {image.map((img, index) => (
+          <SwiperSlide key={index}>
+            <div className="w-full h-full flex  items-center justify-center">
+              <img
+                src={img.src}
+                alt={`Full image ${index}`}
+                className="w-full h-full  object-contain"
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  </div>
+)}
+
       </div >
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[9999] flex items-center justify-center"
-          onClick={() => setIsOpen(false)}
-        >
-          <img
-            src={imageSrc}
-            className="max-w-full max-h-full object-contain"
-            alt="Full view"
-          />
-        </div>
-      )}
+      
     </>
   )
 }

@@ -16,11 +16,11 @@ function Section3() {
 
             {/* Tiêu đề */}
             <div className="grid grid-cols-8 gap-1 items-center sm:px-6 px-2 sm:py-4 py-2 pb-0 sm:pb-4 text-center relative">
-              <h2 className="sm:block hidden text-[15px] col-span-8  xl:text-lg 2xl:text-xl font-medium mb-1">
+              <h2 className="md:block hidden text-[15px] col-span-8  xl:text-lg 2xl:text-xl font-medium mb-1">
                   Bảng giá các dịch vụ khám và chữa bệnh:
                 </h2>
               {/* Logo bên trái */}
-              <div className="sm:self-end col-start-4 col-end-6 place-items-center sm:col-span-2 lg:col-span-1">
+              <div className="sm:self-end col-start-4 col-end-6 place-items-center  md:col-span-1">
                 <div className="aspect-[4/1]">
                   <img src={Logo} alt="Logo" className="w-full h-full object-contain" />
                 </div>
@@ -29,17 +29,16 @@ function Section3() {
              
               {/* Tiêu đề ở giữa */}
                
-              <div className="sm:col-start-3 sm:col-end-7  col-span-8 place-items-center">
-                <h2 className="block sm:hidden text-[15px] col-span-8  xl:text-lg 2xl:text-xl font-medium mb-1">
+              <div className="  col-span-8 md:col-start-2 md:col-end-8 place-items-center">
+                <h2 className="block md:hidden text-[15px] col-span-8  lg:text-lg 2xl:text-xl font-medium mb-1">
                   Bảng giá các dịch vụ khám và chữa bệnh:
                 </h2>
-                <p className="text-gray-500 text-[12px]   xl:text-lg 2xl:text-xl">
+                <p className="text-gray-500 text-[12px] lg:text-[16px]  xl:text-lg 2xl:text-xl">
                   Ghi chú: Lorem ipsum dolor sit amet, consectetur adipiscing elit lis iaculis ac felis
                 </p>
               </div>
 
-              {/* Bên phải để trống cho cân đối */}
-              <div className="hidden sm:block" />
+             
             </div>
 
             {/* Bảng */}
@@ -113,9 +112,10 @@ function Section3() {
 
 
             {/* Footer */}
-            <div className="bg-gradient-to-r  rounded-b-2xl from-green-500 z-50 to-blue-500 text-white text-center py-3 text-sm flex flex-col sm:flex-row justify-center items-center gap-2">
-              <span className="flex gap-0.5"><img src={Phone} alt="" /> Hotline: 1900 1806</span>
-              <span className="flex gap-0.5"><img src={Global} alt="icon" /> <a href="https://benhvienphuongdong.vn/" target="_blank" className="">https://benhvienphuongdong.vn/</a></span>
+            <div className="bg-gradient-to-r  rounded-b-2xl from-green-500 z-50 to-blue-500 text-white text-center py-3 text-sm flex flex-col sm:flex-row justify-center items-center mx-auto gap-[5%]">
+              
+              <div className="flex gap-0.5"><img src={Phone} alt="" /> Hotline: 1900 1806</div>
+              <div className="flex gap-0.5"><img src={Global} alt="icon" /> <a href="https://benhvienphuongdong.vn/" target="_blank" className="">https://benhvienphuongdong.vn/</a></div>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ const handleCloseModal = () => {
   setTimeout(() => {
     setIsClosing(false);
     setShowModal(false);
-  }, 300); // Thời gian trùng với animation duration
+  }, ); // Thời gian trùng với animation duration
 };
   return (
     <>
@@ -68,8 +68,8 @@ const handleCloseModal = () => {
           <div className="opacity-60 px-1 text-[12px] sm:text-xs md:text-xs lg:text-sm xl:text-base sm:px-2 pb-3">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est earum dicta ut repellendus omnis. Earum exercitationem nam eveniet, nesciunt velit temporibus nobis explicabo, porro maiores iure consequuntur, quod modi non.
           </div>
-          <div className="px-2 pb-3 sm:mt-2 flex justify-center sm:justify-start"><button onClick={handleShowModal} className={` p-1.5  sm:px-6 sm:py-2.5 rounded-full font-bold transition-all duration-300 ease-in-out 
-                            text-[10px] cursor-pointer
+          <div className="px-2 pb-3 sm:mt-2 flex justify-center sm:justify-start"><button onClick={handleShowModal} className={` p-1.5 px-3  sm:px-6 sm:py-2.5 rounded-full font-bold transition-all duration-300 ease-in-out 
+                            text-[13px] cursor-pointer
                              sm:text-[13px] md:text-[13px] lg:text-[16px] bg_button text-white shadow-md hover:bg-gradient-to-b hover:from-[var(--main-color-hover-from)] hover:to-[var(--main-color-hover-to)]`}
           >Đăng ký tư vấn</button></div>
 
@@ -90,7 +90,7 @@ const handleCloseModal = () => {
                  duration-300 ease-out scale-100 ${isClosing ? 'animate-[fadeOut_0.3s_ease-in]' : 'animate-[scaleIn_0.3s_ease-out]'}`}>
                   <button
                     onClick={handleCloseModal}
-                    className="absolute -top-3 -right-3 w-8 h-8 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center text-lg font-bold shadow-lg transition-all duration-200 hover:scale-110"
+                    className="absolute -top-4 -right-4 w-8 h-8 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center text-lg font-bold shadow-lg transition-all duration-200 hover:scale-110"
                   >
                     ×
                   </button>
@@ -103,7 +103,7 @@ const handleCloseModal = () => {
                   {/* Thêm nút action nếu cần */}
                   <div className="flex gap-3 justify-end">
                     <button
-                      onClick={handleShowModal}
+                      onClick={handleCloseModal}
                       className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors"
                     >
                       Hủy

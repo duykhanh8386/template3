@@ -3,7 +3,32 @@
   --main-color-to: #f97316;       /* to-orange-500 */
   --main-color-hover-from: #ea580c; /* from-orange-600 */
   --main-color-hover-to: #c2410c;
+   --main-gradient-from: #50C577;
+  --main-gradient-to: #2DBEFC;
 }
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.bg-main-gradient {
+  background: linear-gradient(270deg, var(--main-gradient-from), var(--main-gradient-to), var(--main-gradient-from));
+  background-size: 200% 200%;
+
+ 
+}
+
+/* Animation riêng biệt */
+.animate-gradient {
+  animation: gradientFlow 15s ease infinite;
+}
+
 .bg_button {
   background-image: linear-gradient(to bottom, var(--main-color-from), var(--main-color-to));
   color: white;
@@ -12,8 +37,21 @@
   border-radius: 9999px; /* tương đương rounded-full */
   transition: background-image 0.3s ease-in-out;
 }
+.swiper-slide {
+  transition-timing-function: ease-in-out;
+  will-change: transform;
+}
 .swiper-wrapper {
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  transition-timing-function: ease-out !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  transition: transform 0.2s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.1);
 }
 
 .bg_button:hover {

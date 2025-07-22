@@ -1,0 +1,29 @@
+
+{
+  "doctors":[
+    {
+      "id":1,
+      "name":"BS: NGUYỄN TRUNG CHÍNH",
+      "level":"PGS.TS. Bác sĩ Ung bướu - Giám đốc Bệnh viện Đa khoa Phương Đông",
+      "image":"/images/Doctor1.png"
+    },
+    {
+      "id":2,
+      "name":"BS: NGUYỄN HUY BẠO",
+      "level":"PGS.TS. Bác sĩ Ung bướu - Phó giám đốc Bệnh viện Đa khoa Phương Đông",
+      "image":"/images/Doctor2.png"
+    },
+    {
+      "id":3,
+      "name":"BS: TRẦN KINH TRANG",
+      "level":"PGS.TS. Bác sĩ Ung bướu - Phó giám đốc Bệnh viện Đa khoa Phương Đông",
+      "image":"/images/Doctor3.png"
+    },
+    {
+      "id":4,
+      "name":"DS: NGUYỄN THỊ KIM YẾN",
+      "level":"PGS.TS. Bác sĩ Ung bướu - Phó giám đốc Bệnh viện Đa khoa Phương Đông",
+      "image":"/images/Doctor4.png"
+    }
+  ]
+}
