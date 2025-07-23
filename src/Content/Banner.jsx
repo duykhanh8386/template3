@@ -70,7 +70,7 @@ const [delayedActiveIndex, setDelayedActiveIndex] = useState(null);
         ></div>
         <div className="overflow-hidden">
           {/* Nội dung section1 */}
-          <div className="relative ml-auto 4k:max-w-[75%] sm:max-w-[90%] max-w-[95%] xl:py-5 z-[2] text-center pt-4 lg:pt-8 flex  !pr-0">
+          <div className="relative ml-auto 4k:max-w-[86%] sm:max-w-[90%] max-w-[95%] xl:py-5 z-[2] text-center pt-4 lg:pt-8 flex  !pr-0">
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 sm:gap-4 md:gap-2 gap-0">
 
               <div className="md:col-span-3 lg:col-span-4 xl:col-span-2 px-0 sm:pr-6 lg:pr-8 text-left">

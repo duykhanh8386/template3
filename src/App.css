@@ -37,6 +37,9 @@
   border-radius: 9999px; /* tương đương rounded-full */
   transition: background-image 0.3s ease-in-out;
 }
+.bg_button:hover {
+  background-image: linear-gradient(to right, var(--main-color-to), var(--main-color-hover-to));
+}
 .swiper-slide {
   transition-timing-function: ease-in-out;
   will-change: transform;
@@ -54,9 +57,7 @@
   transform: scale(1.1);
 }
 
-.bg_button:hover {
-  background-image: linear-gradient(to right, var(--main-color-to), var(--main-color-hover-to));
-}
+
 .font-sale{
 
 font-family: 'Arima Madurai';
