@@ -83,23 +83,12 @@ function Footer(){
   };
   return(
     <>
-    <div className="w-full  mb-[-3px] bg-white relative overflow-hidden">
+    <div className="w-full mb-[-3%] bg-white relative overflow-hidden">
   <img src={VectorFooter} alt="Footer" className="w-full " />
 </div>
     <footer className="relative bg-gradient-to-r w-full from-[#1CAB55] to-[#04A4EC] text-white  ">
   {/* Vùng vector bo cong phía trên */}
   
-
-
-{/* <!-- Overlay + Modal --> */}
-<div id="modalOverlay" class="fixed inset-0 bg-black/40 z-50 border-b-0 hidden justify-center items-start">
-  <div id="modalContent"
-       class="mt-10 w-[400px] bg-white p-6 rounded-lg shadow-lg opacity-0 translate-y-[-100px] transition-all duration-500 ease-in-out">
-    <h2 class="text-xl font-bold mb-4">Tiêu đề Modal</h2>
-    <p class="mb-4">Nội dung modal...</p>
-    <button onclick="closeModal()" class="bg-red-500 text-white px-4 py-2 rounded">Đóng</button>
-  </div>
-</div>
 
 
 
