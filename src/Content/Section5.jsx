@@ -119,7 +119,7 @@ function Section5() {
                     setIsOpen(true);
                   }} >
               <div  
-                className={`transition-all w-full duration-300  flex flex-col rounded-2xl rounded-bl-none items-center rounded-br-4xl rounded-tl-4xl text-center bg-white shadow-md hover:shadow-xl border-0`}
+                className={`transition-all relative  w-full duration-300  flex flex-col rounded-2xl rounded-bl-none items-center rounded-br-4xl rounded-tl-4xl text-center bg-white shadow-md hover:shadow-xl border-0`}
               >
                 <div className="w-full  aspect-[3/4] overflow-hidden rounded-2xl rounded-bl-none">
                   <img 
@@ -137,13 +137,15 @@ function Section5() {
         
       
         </Swiper>
-       {isOpen && (
+   
+      </div >
+          {isOpen && (
   <div
-    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[50] flex items-center justify-center"
+    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[3] flex items-center justify-center"
     onClick={() => setIsOpen(false)}
   >
     <div
-      className="w-[90%] h-[90%] flex items-center justify-center"
+      className="w-[90%] h-[90%]  flex items-center justify-center"
       onClick={(e) => {e.stopPropagation()
        
       }} // tránh tắt khi click ảnh
@@ -158,7 +160,7 @@ function Section5() {
         spaceBetween={30}
         slidesPerView={1}
         initialSlide={image.findIndex(img => img.src === imageSrc)}
-        className="w-full h-full"
+        className="w-full h-full "
       >
         {image.map((img, index) => (
           <SwiperSlide key={index}>
@@ -176,8 +178,6 @@ function Section5() {
   </div>
 )}
 
-      </div >
-      
     </>
   )
 }

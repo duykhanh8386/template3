@@ -1,5 +1,7 @@
 import Banner from "../Content/Banner";
+import Footer from "../Content/Footer";
 import Header from "../Content/Header";
+import Section10 from "../Content/Section10";
 import Section3 from "../Content/Section3";
 import Section4 from "../Content/Section4";
 import Section5 from "../Content/Section5";
@@ -22,6 +24,8 @@ function Layout() {
       <Section7/>
       <Section8/>
       <Section9/>
+      <Section10/>
+      <Footer/>
       </div>
     </>
   )

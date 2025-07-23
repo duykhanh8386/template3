@@ -19,7 +19,7 @@ const [delayedActiveIndex, setDelayedActiveIndex] = useState(null);
     setTimeout(() => {
       setIsClosing(false);
       setShowModal(false);
-    }, 300); // Thời gian trùng với animation duration
+    }); // Thời gian trùng với animation duration
   };
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -99,7 +99,7 @@ const [delayedActiveIndex, setDelayedActiveIndex] = useState(null);
 
 
               {/* Bên phải: Slider */}
-              <div className="lg:col-span-4 col-span-4 relative  ">
+              <div className="lg:col-span-4 col-span-4 relative  z-[2]">
                 <Swiper
                   modules={[Navigation]}
                   navigation={{
@@ -182,8 +182,11 @@ const [delayedActiveIndex, setDelayedActiveIndex] = useState(null);
 
             {/* // Thay thế phần modal hiện tại của bạn bằng code này: */}
 
-            {showModal && (
-              <div className="fixed inset-0 z-[99999]  ease-in-out flex items-center justify-center">
+          
+          </div>
+        </div>
+  {showModal && (
+              <div className="fixed inset-0 z-[3]  ease-in-out flex items-center justify-center">
                 {/* Overlay nền */}
                 <div
                   onClick={handleCloseModal}
@@ -222,9 +225,6 @@ const [delayedActiveIndex, setDelayedActiveIndex] = useState(null);
                 </div>
               </div>
             )}
-          </div>
-        </div>
-
 
         {/* Section2 */}
         <div className="grid grid-cols-1 mb-5 lg:mb-0 xl:py-15 relative sm:grid-cols-2 pt-4 lg:pt-8 gap-5 4k:max-w-[75%] sm:max-w-[80%] max-w-[95%] mx-auto">

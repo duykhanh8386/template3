@@ -19,7 +19,7 @@ function Section9(){
   };
   return(
     <>
-    <div className="4k:max-w-[75%] relative sm:max-w-[80%] max-w-[95%] mx-auto xm:mt-[5%]">
+    <div className="4k:max-w-[75%] relative sm:max-w-[80%] max-w-[95%] mx-auto md:mt-[5%]">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-[3%] items-stretch">
         <div className="w-full h-full block sm:hidden">
             <img src={Radar} alt="Radar" className="h-full object-contain"/>
@@ -27,14 +27,14 @@ function Section9(){
           <div className="col-span-1 self-center sm:pb-0 pb-10">
             <div className="font-medium text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl 4k:text-4xl mb-2">Tại sao bạn nên chọn gói dịch vụ thai sản tại bệnh viện Phương Đông</div>
             <div className="flex flex-col gap-y-[2%]">
-              <div className="font-medium 2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 2xl:text-xl sm:mb-4 mb-1">Khám định kỳ với Bác sĩ sản khoa.</div>
-              <div className="2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 2xl:text-xl sm:mb-4 mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </div>
-              <div className="font-medium 2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 2xl:text-xl sm:mb-4 mb-1">Chăm sóc thai kỳ cùng bác sĩ Sản khoa hàng đầuKhám định kỳ với Bác sĩ sản khoa.</div>
-              <div className="2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 2xl:text-xl sm:mb-4 mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </div>
-              <div className="font-medium 2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 2xl:text-xl sm:mb-4 mb-1">Ekip đón bé chuyên môn cao, có khả năng xử lý nhiều ca khó</div>
-              <div className="2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 2xl:text-xl sm:mb-4 mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </div>
-              <div className="font-medium 2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 2xl:text-xl sm:mb-4 mb-1">Chăm lo cho mẹ và bé chu đáo - Cả nhà nhàn tênh</div>
-              <div className="2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 2xl:text-xl sm:mb-4 mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </div>
+              <div className="font-medium 2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 4k:text-xl sm:mb-2 mb-1">Khám định kỳ với Bác sĩ sản khoa.</div>
+              <div className="2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 4k:text-xl sm:mb-2 mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </div>
+              <div className="font-medium 2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 4k:text-xl sm:mb-2 mb-1">Chăm sóc thai kỳ cùng bác sĩ Sản khoa hàng đầuKhám định kỳ với Bác sĩ sản khoa.</div>
+              <div className="2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 4k:text-xl sm:mb-2 mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </div>
+              <div className="font-medium 2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 4k:text-xl sm:mb-2 mb-1">Ekip đón bé chuyên môn cao, có khả năng xử lý nhiều ca khó</div>
+              <div className="2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 4k:text-xl sm:mb-2 mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </div>
+              <div className="font-medium 2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 4k:text-xl sm:mb-2 mb-1">Chăm lo cho mẹ và bé chu đáo - Cả nhà nhàn tênh</div>
+              <div className="2xl:mt-3 mt-0.5 text-[14px] lg:text-[12px] text-gray-700 xl:text-sm 4k:text-xl sm:mb-2 mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </div>
                <div className="mt-2 flex justify-center"><button onClick={handleShowModal} className={` p-1.5 px-3 sm:px-6 sm:py-2.5 rounded-full font-bold transition-all duration-300 ease-in-out 
                             text-[13px] cursor-pointer
                              lg:text-[16px] bg_button text-white shadow-md hover:bg-gradient-to-b hover:from-[var(--main-color-hover-from)] hover:to-[var(--main-color-hover-to)]`}

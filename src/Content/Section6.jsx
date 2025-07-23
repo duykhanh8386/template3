@@ -80,7 +80,7 @@ function Section6() {
                 
                 type="text"
                 placeholder="Nhập tên bác sĩ..."
-                className={`absolute right-0 sm:top-full mb1:top-[80%] mt-2 transition-all duration-500 ease-in-out bg-white border border-gray-300 rounded-full px-4 py-2 text-sm mb1:w-40 shadow-md
+                className={`absolute right-0 sm:top-full mb1:top-[105%] mt-2 transition-all duration-500 ease-in-out bg-white border border-gray-300 rounded-full px-4 py-2 text-sm mb1:w-40 shadow-md
       ${showSearch ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}
     `}
               />
@@ -96,11 +96,11 @@ function Section6() {
             {filteredDoctors.map((item) => (
               (item.id==1||item.id==2)?(
               <>
-                <div className="col-span-1 grid grid-cols-2 gap-x-2 items-center justify-around">
+                <div className="col-span-1 grid grid-cols-2 gap-5 items-center xl:items-start">
 
                   {/* Doctor1 */}
 
-                  <div className=" col-span-1 relative z-[1] items-center justify-around gap-2 lg:gap-6">
+                  <div className=" col-span-1 relative z-[1]  gap-2 lg:gap-6">
                     {/* Khung bác sĩ */}
                     {/* Nền xanh hình tròn, chỉ bo dưới */}
                     <div className="aspect-[1] flex justify-center p-5 bg-[linear-gradient(90deg,_#73D090_0%,_#C4EACE_0.01%,_#53CAFB_100%)] rounded-full pt-16 relative z-0">
@@ -111,7 +111,7 @@ function Section6() {
                     </div>
                   </div>
                   {/* Thông tin */}
-                  <div className="flex w-full relative z-[1] justify-center ">
+                  <div className=" w-full relative z-[1] xl:mt-[10%] mt-0">
                     <div className="  col-span-1 mr-[5%]  text-left max-w-sm">
                       <h3 className="text-[15px] sm:text-[20px] md:text-[16px] lg:text-xl  4k:text-3xl font-medium">{item.name}</h3>
                       <p className="text-gray-600 lg:mt-3 mt-1 text-[12px] opacity-70 sm:text-[16px] md:text-sm xl:text-sm ">
@@ -131,9 +131,9 @@ function Section6() {
               (
                 <>
                  {/* Doctor3 */}
-            <div className="col-span-1 grid grid-cols-2 gap-x-2 items-center justify-around">
+            <div className="col-span-1 grid grid-cols-2 gap-x-2 items-center xl:items-start">
               {/* Thông tin */}
-              <div className="flex w-full relative z-[1] justify-center ">
+              <div className=" w-full relative z-[1] xl:mt-[10%] mt-0">
                 <div className="  col-span-1 mr-[5%]  text-left max-w-sm">
                   <h3 className="text-[15px] sm:text-[20px] md:text-[16px] lg:text-xl  4k:text-3xl font-medium">{item.name}</h3>
                   <p className="text-gray-600 lg:mt-3 mt-1 text-[12px] opacity-70 sm:text-[16px] md:text-sm xl:text-sm ">
@@ -148,7 +148,7 @@ function Section6() {
                 </div>
               </div>
               {/* Khung bác sĩ */}
-              <div className=" col-span-1 relative z-[1] items-center justify-around gap-2 lg:gap-6">
+              <div className=" col-span-1 relative z-[1]  gap-2 lg:gap-6">
 
                 {/* Nền xanh hình tròn, chỉ bo dưới */}
                 <div className="aspect-[1] flex justify-center p-5 bg-[linear-gradient(90deg,_#73D090_0%,_#C4EACE_0.01%,_#53CAFB_100%)] rounded-full pt-16 relative z-0">

@@ -55,7 +55,7 @@ function Header() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md w-full">
+      <div className="fixed top-0 left-0 right-0 z-[3] bg-white shadow-md w-full">
         <div className="max-w-full mx-auto flex justify-between sm:justify-around items-center pt-3.5 sticky top-0 bg-white pb-3 lg:px-15">
           <a href="#" title="Home page" >
             <div className="basis-[20%] flex items-center justify-center ml-1 md:ml-1.5 lg:ml-0 h-10 sm:h-8 md:h-10 lg:h-10 xl:h-10 2xl:h-10 w-full

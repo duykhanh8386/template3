@@ -7,7 +7,7 @@ function Section7() {
     <>
 
 
-      <div className=" 4k:max-w-[75%] sm:max-w-[80%] max-w-[95%] mx-auto xl:mt-[10%] lg:mt-[15%] md:mt-[15%] sm:mt-[50%] md4:mt-[55%] mb2:mt-[60%] mb1:mt-[65%] 
+      <div className=" 4k:max-w-[75%] sm:max-w-[80%] max-w-[95%] mx-auto  lg:mt-[15%] md:mt-[15%] sm:mt-[50%] md4:mt-[55%] mb2:mt-[60%] mb1:mt-[65%] 
     flex flex-col lg:gap-0 gap-10 relative ">
 
         <div className="grid gap-[3%] lg:gap-0 lg:grid-cols-2 grid-cols-1 items-stretch">
