@@ -23,9 +23,9 @@ const handleCloseModal = () => {
         <div className="aspect-[9/5] flex items-center relative col-span-1 sm:col-span-6 [&>img]:rounded-tr-[70px] mt-[5%] z-[1] w-full h-auto [&>img]:object-cover [&>img]:w-full [&>img]:h-full ">
           <img src={Mother} alt="Mother and baby" />
           {/* Text box chỉ absolute từ lg trở lên */}
-          <div className="hidden lg:block lg z-[2] absolute bg-white xl:right-[-80%] lg:right-[-50%] 
-            lg:mt-0 lg:col-start-auto shadow-xl 4k:right-[-50%]
-              drop-shadow-2xl rounded-3xl rounded-bl-none sm:p-5 p-3 sm:max-w-md lg:max-w-sm xl:max-w-2xl">
+          <div className="hidden lg:block lg z-[2] 4k:max-w-3xl 4k:py-[5%] absolute bg-white 2xl:right-[-80%] xl:right-[-70%] lg:right-[-50%] 
+            lg:mt-0 lg:col-start-auto shadow-xl 4k:right-[-70%]
+              drop-shadow-2xl rounded-3xl rounded-bl-none sm:p-5 p-3 sm:max-w-md lg:max-w-sm 2xl:max-w-2xl xl:max-w-xl">
             <div className=" px-1 sm:px-2 py-3 font-medium text-lg lg:text-xl xl:text-[22px] 2xl:text-2xl 4k:text-4xl">Bệnh viên Phương Đông tiên phong
               trong dịch vụ thai sản trọn gói</div>
             <div className="opacity-60 px-1 text-[9px] sm:text-xs md:text-xs lg:text-sm xl:text-base sm:px-2 pb-3">
